@@ -1,0 +1,22 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="comment write-comment">
+    <div class="comment-image-container">
+      <img src="/assets/images/avatars/yoda.png" />
+    </div>
+    <fieldset class="comment-form-textarea">
+      <legend>Add a comment..</legend>
+    <textarea  formControlName="title"></textarea>
+  </fieldset>
+    <button class="comment-form-button" type="submit" [disabled]="form.invalid">
+      {{ submitLabel }}
+    </button>
+    <button
+      *ngIf="hasCancelButton"
+      type="button"
+      class="comment-form-button comment-form-cancel-button"
+      (click)="handleCancel.emit()"
+    >
+      Cancel
+    </button>
+  </div>
+  </form>

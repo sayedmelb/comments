@@ -1,0 +1,62 @@
+<div class="comment">
+  <h1>{{comments}}</h1>
+  <div class="comment-content">
+    <div class="comment-image-container">
+      <img src="/assets/images/avatars/{{comment.username}}.png" />
+    </div>
+    <div class="comment-right-part">
+      <div class="comment-content">
+        <div class="comment-author" >{{ comment.username }}</div>
+        <div class="comment-days">{{ daysAgo }} days ago</div>
+      </div>
+    </div>
+  </div>
+  <div class="comment-text" *ngIf="!isEditing()">{{ comment.body }}</div>
+  <div class="comment-actions">
+    <div class="voting-container">
+      <!--voting section-->
+      <div (click)="setActiveCommentVoting(comment.id,comment.vote)">+</div>
+     <div>{{comment.vote}}</div>
+      <div (click)="decreaseCommentVoting(comment.id,comment.vote)">-</div>  
+    
+    </div>
+    <div class="comment-actions-voting-spacer"></div>
+    <div *ngIf="canReply" class="comment-action" (click)="
+            setActiveComment.emit({
+              id: comment.id,
+              type: activeCommentType.replying
+            })
+          " >
+          <i class="fa fa-reply" aria-hidden="true"></i> 
+          Reply
+   
+    </div>
+    <div *ngIf="canEdit" class="comment-action" (click)="
+            setActiveComment.emit({
+              id: comment.id,
+              type: activeCommentType.editing
+            })
+          ">
+          <i class="fas fa-edit" ></i>
+          Edit
+    </div>
+    <div *ngIf="canDelete" class="comment-action" (click)="deleteComment.emit(comment.id)">
+      <i class="fas  fa-trash"></i>
+      Delete
+    </div>
+
+
+  </div>
+  <comment-form *ngIf="isEditing()" submitLabel="Update" [hasCancelButton]="true" [initialText]="comment.body"
+    (handleSubmit)="updateComment.emit({ text: $event, commentId: comment.id })" (handleCancel)="setActiveComment.emit(null)"></comment-form>
+
+  <comment-form *ngIf="isReplying()" submitLabel="Reply"
+    (handleSubmit)="addComment.emit({ text: $event, parentId: replyId })"></comment-form>
+
+</div>
+<div class="replies" *ngIf="replies.length > 0">
+  <comment *ngFor="let reply of replies" [comment]="reply" (setActiveComment)="setActiveComment.emit($event)"
+    [activeComment]="activeComment" (updateComment)="updateComment.emit($event)"
+    (deleteComment)="deleteComment.emit($event)" (addComment)="addComment.emit($event)" [parentId]="comment.id"
+    [replies]="[]" [currentUserId]="currentUserId" (updateVote)="updateVote.emit($event)"></comment>
+</div>

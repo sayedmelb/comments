@@ -1,0 +1,90 @@
+{
+  "comments": [
+    {
+      "id": "1",
+      "body": "I strongly believe this question is not duplicate to attached. The attached question/answer gives different between two dates in years/months/days, but this question is different between two dates in days only.",
+      "username": "lukeskywalker",
+      "userId": "1",
+      "parentId": null,
+      "createdAt": "2021-08-16T23:00:33.010+02:00",
+      "voting": 9,
+      "vote": 4
+    },
+    {
+      "id": "2",
+      "body": "I strongly believe this question is not duplicate to attached. The attached question/answer gives different between two dates in years/months/days, but this question is different between two dates in days only.",
+      "username": "leiaskywalker",
+      "userId": "2",
+      "parentId": null,
+      "createdAt": "2021-08-16T23:00:33.010+02:00",
+      "voting": 0,
+      "vote": 1
+    },
+    {
+      "id": "3",
+      "body": "I strongly believe this quee to attached. The attached question/answer gives different between two dates in years/months/days, but this question is different between two dates in days only.",
+      "username": "vader",
+      "userId": "2",
+      "parentId": "1",
+      "createdAt": "2021-08-16T23:00:33.010+02:00",
+      "voting": 0,
+      "vote": 5
+    },
+    {
+      "id": "4",
+      "body": "I strongly believe this question is not dup attached.   different between two dates in days only.",
+      "username": "vader",
+      "userId": "2",
+      "parentId": "2",
+      "createdAt": "2021-08-16T23:00:33.010+02:00",
+      "voting": 0,
+      "vote": 2
+    },
+    {
+      "body": "yes",
+      "parentId": "2",
+      "createdAt": "2022-06-24T04:30:16.419Z",
+      "userId": "1",
+      "username": "lukeskywalker",
+      "id": "7BIgTw7",
+      "voting": 0,
+      "vote": 3
+    },
+    {
+      "body": "jjjhjhjhj",
+      "parentId": null,
+      "createdAt": "2022-06-24T04:31:45.129Z",
+      "userId": "1",
+      "username": "vader",
+      "id": "OAv3J0g",
+      "voting": 0,
+      "vote": 6
+    },
+    {
+      "body": "ghggfhgfhgfh",
+      "parentId": null,
+      "createdAt": "2022-06-26T06:03:08.417Z",
+      "userId": "1",
+      "username": "lukeskywalker",
+      "id": "uNwXY4_",
+      "vote": 0
+    },
+    {
+      "body": "ghgfhfhgfhgfh",
+      "parentId": "uNwXY4_",
+      "createdAt": "2022-06-26T06:03:27.017Z",
+      "userId": "1",
+      "username": "lukeskywalker",
+      "id": "MAUAWIk"
+    },
+    {
+      "body": "TEst votesssss",
+      "parentId": null,
+      "createdAt": "2022-06-26T09:42:17.748Z",
+      "userId": "1",
+      "username": "lukeskywalker",
+      "vote": 3,
+      "id": "wIi11Cn"
+    }
+  ]
+}
